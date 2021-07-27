@@ -20,9 +20,9 @@ app.post('/index', function (req, res) {
    res.json({user_name: username})
 });
 
-app.get('/', function (req, res){
-    console.log('sad');
-});
+// app.get('/', function (req, res){
+//     console.log('sad');
+// });
 
 // Start listening to port 8000
 app.listen(8000, function () {
