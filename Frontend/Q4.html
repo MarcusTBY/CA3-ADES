@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="/Frontend/CSS/Animation.css" rel="stylesheet">
+    <link href="/Frontend/CSS/question.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="content">
+
+        <img id="img" src="/Img/Beow Tan.jpg" alt="Amos-Yee" width="710" height="">
+        <br>
+        <span id="hint">HINT: She was a youtube "content creator"</span>
+
+        <div id="buttons">
+
+
+            <button id="ans-button" type="button" data-toggle="modal" data-target="#Wrong-Ans"><span>Ang Siew
+                    Hock</span><span>A</span></button>
+
+            <button id="ans-button" type="button" data-toggle="modal" data-target="#Wrong-Ans"><span>Kiam
+                    Leng</span><span>B</span></button>
+
+            <br><br>
+
+            <button id="ans-button" type="button" data-toggle="modal" data-target="#Wrong-Ans"><span>Chua Huan
+                    Soon</span><span>C</span></button>
+
+            <button id="ans-button" type="button" data-toggle="modal" data-target="#Correct-Ans"><span>Tan Beow
+                    Hiong</span><span>D</span></button>
+
+
+        </div>
+    </div>
+    <!-- Modal Correct-->
+    <div class="modal fade" id="Correct-Ans" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">CORRECT!</h5>
+                    <!-- Animation Correct -->
+                    <div class="swal2-icon swal2-success swal2-animate-success-icon" style="display: flex;">
+                        <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 253);">
+                        </div>
+                        <span class="swal2-success-line-tip"></span>
+                        <span class="swal2-success-line-long"></span>
+                        <div class="swal2-success-ring"></div>
+                        <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+                        <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);">
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <img src="/Img/Beow Tan 1.png" alt="Amos-Yee" width="350" height="" class="rounded mx-auto d-block">
+                    <br>
+
+                    Tan Beow Hiong, 57, was charged with one count of public nuisance and two counts of knowingly
+                    committing an act that is prejudicial to the maintenance of harmony between different religious
+                    or racial groups and disturbs or is likely to disturb the public tranquility.
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <button id="nxt" type="button" class="btn btn-primary">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Wrong -->
+    <div class="modal fade" id="Wrong-Ans" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">INCORRECT!</h5>
+
+                    <!--Wrong animation-->
+                    <div class="swal2-icon swal2-error swal2-animate-error-icon" style="display: flex;"><span
+                            class="swal2-x-mark"><span class="swal2-x-mark-line-left"></span><span
+                                class="swal2-x-mark-line-right"></span></span></div>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <img src="/Img/Beow Tan 1.png" alt="Amos-Yee" width="350" height="" class="rounded mx-auto d-block">
+                    <br>
+
+                    Tan Beow Hiong, 57, was charged with one count of public nuisance and two counts of knowingly
+                    committing an act that is prejudicial to the maintenance of harmony between different religious
+                    or racial groups and disturbs or is likely to disturb the public tranquility.
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <button id="nxt2" type="button" class="btn btn-primary">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+<script>
+    window.addEventListener('load', (event) => {
+        console.log('page is fully loaded');
+    });
+
+    document.getElementById('nxt').addEventListener('click', function () {
+        window.location.href = 'Q5.html'
+    })
+
+    document.getElementById('nxt2').addEventListener('click', function () {
+        window.location.href = 'Q5.html'
+    })
+
+
+
+</script>
+
+</html>

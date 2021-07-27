@@ -1,0 +1,94 @@
+body {
+    background-image: url(/Img/BG\ grad.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img {
+    border-radius: 8px;
+    margin: auto;
+    border-style: double;
+    border-width: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#buttons {
+    margin-bottom: 10%;
+}
+
+
+#content {
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+}
+
+#hint {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* import */
+
+#ans-button {
+    background-color: transparent;
+    position: relative;
+    bottom: 20px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    line-height: 40px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+}
+
+#ans-button span {
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    border: 2px solid rgb(250, 250, 250);
+    background-color: rgb(68, 68, 68);
+    color: white;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#ans-button span:nth-child(1) {
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+#ans-button span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+#ans-button:hover span:nth-child(1) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+#ans-button:hover span:nth-child(2) {
+    background: #e0e5ec;
+    color: #e0e5ec;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
