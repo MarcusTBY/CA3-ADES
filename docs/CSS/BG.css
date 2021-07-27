@@ -7,7 +7,7 @@ p {
 }
 
 #bg {
-    background: url(/Img/boxes\ BG.gif) no-repeat center center fixed;
+    background: url(../Img/boxes\ BG.gif) no-repeat center center fixed;
     background-size: cover;
     background-blend-mode: darken;
 }
