@@ -24,7 +24,7 @@ app.post('/index', function (req, res) {
 });
 
 app.get('/', function (req, res){
-    console.log('sad');
+    res.status(200).send('success')
 });
 
 
