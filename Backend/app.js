@@ -10,7 +10,7 @@ app.use(cors());
 
 // Creating sessions object as global variable.
 
-app.get('/', function( req ,res){
+app.get('/', function(req ,res){
     res.status(200).send('salamulaikum')
 })
 
