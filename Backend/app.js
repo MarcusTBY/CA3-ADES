@@ -10,24 +10,27 @@ app.use(cors());
 
 // Creating sessions object as global variable.
 
-app.get('/', function(req ,res){
-    res.status(200).send('salamulaikum')
-})
+// app.get('/', function(req ,res){
+//     res.status(200).send('salamulaikum')
+// })
 
 // Middleware for creating new session
-// app.post('/index', function (req, res) {
+app.post('/index', function (req, res) {
 
-//     const username = req.query.username;
-//     console.log('yourname is: ' + username)
+    const username = req.query.username;
+    console.log('yourname is: ' + username)
 
-//    res.json({user_name: username})
-// });
+   res.json({user_name: username})
+});
 
-// app.get('/', function (req, res){
-//     console.log('sad');
-// });
+app.get('/', function (req, res){
+    console.log('sad');
+});
+
+
+const port =  process.env.PORT || 8000 
 
 // Start listening to port 8000
-app.listen(8000, function () {
-    console.log('Listening to 8000');
+app.listen(port, function () {
+    console.log('Listening to port ' + port);
 });
