@@ -7,19 +7,21 @@ const app = express();
 app.use(cors());
 
 
-// okok
 
 // Creating sessions object as global variable.
 
+app.get('/', function( req ,res){
+    res.status(200).send('salamulaikum')
+})
 
 // Middleware for creating new session
-app.post('/index', function (req, res) {
+// app.post('/index', function (req, res) {
 
-    const username = req.query.username;
-    console.log('yourname is: ' + username)
+//     const username = req.query.username;
+//     console.log('yourname is: ' + username)
 
-   res.json({user_name: username})
-});
+//    res.json({user_name: username})
+// });
 
 // app.get('/', function (req, res){
 //     console.log('sad');
