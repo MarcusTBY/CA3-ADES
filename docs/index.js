@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const username = name.value;
 
-        const url = `http://localhost:8000/index?username=${username}`;
+        const url = `https://git.heroku.com/ca3-project.git/index?username=${username}`;
 
 
         fetch(url, { method: 'POST' })
