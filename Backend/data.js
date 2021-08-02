@@ -12,8 +12,8 @@ module.exports = class postgres {
     static init() {
         return pool.query(
             `
-                DROP TABLE IF EXISTS magic_number_game_tab;
-                CREATE TABLE magic_number_game_tab (
+                DROP TABLE IF EXISTS SGL_users;
+                CREATE TABLE SGL_users (
                     id SERIAL primary key,
                     Name VARCHAR not null
                 );
