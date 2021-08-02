@@ -15,7 +15,7 @@ module.exports = class postgres {
                 DROP TABLE IF EXISTS magic_number_game_tab;
                 CREATE TABLE magic_number_game_tab (
                     id SERIAL primary key,
-                    Name VARCHAR not null,
+                    Name VARCHAR not null
                 );
             `,
         );
