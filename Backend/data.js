@@ -34,5 +34,18 @@ module.exports = class postgres {
         );
     }
 
+    static GETusers() {
+        return pool.query(
+            `
+                SELECT Name 
+                From SGL_users
+                WHERE 1 = 1
+            `,
+            
+
+           
+        );
+    }
+
 }
 

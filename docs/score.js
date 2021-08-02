@@ -1,21 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-        fetch('http://localhost:8000/', { method: 'GET' })
+        fetch('https://ca3-project.herokuapp.com/username', { method: 'GET' })
             // first .then, receive the response
             .then(function (response) {
-                // Treat the body as json and convert it into JavaScript Object
+                // Treat the body as json and convert it into JavaScript Object'
+                    console.log(response)
                 return response.json();
             })
             // second .then, where we can access the JavaScript Object
             .then(function (json) {
-                // extract the session Id from response body
-                const sessionId = json.session_id;
-
-                // Get reference to the element that will display the session id
-                const sessionIdField = document.getElementById('session-id-field');
-
-                // Set the innerHTML to the session id
-                sessionIdField.innerHTML = sessionId;
+                console.log(json)
+                
             });
 
 });

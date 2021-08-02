@@ -24,7 +24,7 @@ app.post('/init', function (req, res, next) {
 });
 
 
-app.post('/index', function (req, res) {
+app.post('/index', function (req, res, next) {
 
     const username = req.query.username;
     console.log('yourname is: ' + username)
@@ -38,8 +38,17 @@ app.post('/index', function (req, res) {
         .catch(next);
 });
 
-app.get('/', function (req, res) {
-    res.status(200).send('success')
+
+app.get('/username', function (req, res, next) {
+
+
+    return db.GETusers()
+        .then(function () {
+            console.log(result)
+            return res.status(200).send();
+        })
+        .catch(next);
+
 });
 
 
