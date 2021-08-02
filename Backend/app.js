@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+const db = require('./data');
 
 // Creating the app and enabling cors
 const app = express();
@@ -15,6 +15,15 @@ app.use(cors());
 // })
 
 // Middleware for creating new session
+app.post('/init', function (req, res, next) {
+    return db.init()
+        .then(function () {
+            return res.sendStatus(200);
+        })
+        .catch(next);
+});
+
+
 app.post('/index', function (req, res) {
 
     const username = req.query.username;
@@ -23,7 +32,7 @@ app.post('/index', function (req, res) {
    res.json({user_name: username})
 });
 
-app.get('/', function (req, res){
+app.get('/', function (req, res){   
     res.status(200).send('success')
 });
 
