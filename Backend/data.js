@@ -20,4 +20,19 @@ module.exports = class postgres {
             `,
         );
     }
+
+
+    static Adduser(Name) {
+        return pool.query(
+            `
+                INSERT INTO SGL_users
+                (Name)
+                VALUES
+                ($1)
+            `,
+            [Name],
+        );
+    }
+
 }
+
