@@ -31,7 +31,7 @@ app.post('/index', function (req, res, next) {
 
     res.json({ user_name: username })
 
-    return db.Adduser(username)
+    db.Adduser(username)
         .then(function () {
             return res.json({ user_name: username })
         })
@@ -42,10 +42,12 @@ app.post('/index', function (req, res, next) {
 app.get('/username', function (req, res, next) {
 
 
-    return db.GETusers()
-        .then(function () {
-            console.log(result)
-            return res.status(200).send();
+    db.GETusers()
+        .then(function (result) {
+
+            console.log(result.rows)
+
+            return res.status(200).send(result.rows);
         })
         .catch(next);
 
