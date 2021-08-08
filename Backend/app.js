@@ -33,7 +33,7 @@ app.post('/index', function (req, res, next) {
 
     db.Adduser(username)
         .then(function () {
-            return res.json({ user_name: username })
+            res.status(200).json({ user_name: username })
         })
         .catch(next);
 });
@@ -47,7 +47,7 @@ app.get('/username', function (req, res, next) {
 
             console.log(result.rows)
 
-            return res.status(200).send(result.rows);
+             res.status(200).send(result.rows);
         })
         .catch(next);
 
