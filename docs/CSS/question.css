@@ -106,12 +106,12 @@ body {
 }
 
 .modal-content{
-    background-image: url(/docs/Img/popup.gif);
+    background-image: url(../Img/popup.gif);
     background-size: contain;
 
 }
 #MC-bg{
-    background-image: url(/docs/Img/popup.gif);
+    background-image: url(../Img/popup.gif);
     background-size: cover;
 }
 .modal-header{

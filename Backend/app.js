@@ -29,8 +29,6 @@ app.post('/index', function (req, res, next) {
     const username = req.query.username;
     console.log('yourname is: ' + username)
 
-    res.json({ user_name: username })
-
     db.Adduser(username)
         .then(function () {
             res.status(200).json({ user_name: username })
