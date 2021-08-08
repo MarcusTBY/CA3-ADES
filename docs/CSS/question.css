@@ -1,5 +1,5 @@
 body {
-    background-image: url(../Img/BG\ grad.png);
+    background-image: url(../Img/BG.gif);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -8,8 +8,9 @@ body {
     border-radius: 8px;
     margin: auto;
     border-style: double;
+    border-color: rgba(255, 255, 255, 0.473);
     border-width: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgba(255, 255, 255, 0.685);
 }
 
 #buttons {
@@ -26,7 +27,18 @@ body {
 #hint {
     margin-top: 30px;
     margin-bottom: 30px;
+    margin: 30px 30%;
     display: block;
+    background-color: rgba(0, 0, 0, 0.397);
+    border-color: rgba(255, 255, 255, 0.356);
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    border-style: double;
+    border-width: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.582);
+   
 }
 
 /* import */
@@ -49,7 +61,7 @@ body {
     width: 130px;
     height: 40px;
     border: 2px solid rgb(250, 250, 250);
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(95, 43, 143);
     color: white;
     margin: 0;
     text-align: center;
@@ -91,4 +103,35 @@ body {
     -webkit-transform: rotateX(-90deg);
     -moz-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
+}
+
+.modal-content{
+    background-image: url(/docs/Img/popup.gif);
+    background-size: contain;
+
+}
+#MC-bg{
+    background-image: url(/docs/Img/popup.gif);
+    background-size: cover;
+}
+.modal-header{
+    padding-bottom: 0;
+}
+#exampleModalLongTitle{
+    margin-left: 10%;
+    margin-top: 5px;
+}
+.modal-header .close{
+    padding-top: 23px;
+}
+.close span{
+    width: 5px;
+    margin-right: 45px;
+
+}
+#sypnosis{
+    font-size: 14px;
+    font-weight: bolder;
+    padding-left: 50px;
+    padding-right: 70px;
 }
